@@ -13,7 +13,7 @@ RUN pip3 --version
 WORKDIR  /home/oem/Desktop/Temperature_Prediction_ML_Model
 
 # Installing python dependencies
-COPY helpdesk/requirements.txt .
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy all the files from the project’s root to the working directory
