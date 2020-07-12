@@ -1,4 +1,4 @@
-FROM python:3.6-stretch
+FROM python:3.6-stretch as testml
 MAINTAINER Josh 
 
 # install build utilities
@@ -10,15 +10,15 @@ RUN python3 --version
 RUN pip3 --version
 
 # set the working directory for containers
-WORKDIR  /usr/src/Temperature_Prediction_ML_Model
+WORKDIR  /home/oem/Desktop/Temperature_Prediction_ML_Model
 
 # Installing python dependencies
-COPY requirements.txt .
+COPY helpdesk/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy all the files from the project’s root to the working directory
-COPY src/ /src/
-RUN ls -la /src/*
+COPY / /
+RUN ls -la /*
 
 # Running Python Application
 CMD ["python3", "/Temperature_Prediction.py"]
