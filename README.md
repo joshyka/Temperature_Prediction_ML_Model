@@ -2,4 +2,4 @@
 
 
 Conventional machine learning model to predict temperature/ weather with .csv dataset.  <br />
-Linux environment, Docker , Python used.
+Linux environment, Docker , Python, Jupyter notebook used.
